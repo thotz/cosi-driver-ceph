@@ -38,7 +38,7 @@ spec:
       containers:
       - name: ceph-cosi-driver
         image: $(CEPH_IMAGE_ORG)/ceph-cosi-driver:$(CEPH_IMAGE_VERSION)
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         envFrom:
         - secretRef:
             name: objectstorage-provisioner
